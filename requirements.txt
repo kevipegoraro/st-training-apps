@@ -1,2 +1,8 @@
 streamlit
 pandas
+
+# graficos - financial dashboard
+plotly 
+requests 
+reportlab 
+matplotlib
