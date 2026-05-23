@@ -3,8 +3,8 @@ sudo apt update
 sudo apt install git gh -y
 
 # configurar git
-git config --global user.name "SEU_NOME"
-git config --global user.email "SEU_EMAIL_DO_GITHUB"
+git config --global user.name "Kevi Pegoraro"
+git config --global user.email "kevipegoraro@hotmail.com"
 
 # logar no GitHub
 gh auth login
@@ -31,8 +31,27 @@ git add .
 git commit -m "Initial commit"
 
 # criar repositório público no GitHub e conectar remoto
-gh repo create NOME_DO_REPOSITORIO --public --source=. --remote=origin
+gh repo create st-training-apps --public --source=. --remote=origin
 
 # enviar para o GitHub
 git branch -M main
 git push -u origin main
+
+
+----- dev rotine:
+
+# ver arquivos alterados
+git status
+
+# adicionar todos os arquivos novos/alterados
+git add .
+
+# criar commit
+git commit -m "Descreva o que foi alterado"
+
+# enviar para o remoto
+git push
+
+-- one line
+# fluxo completo em uma linha
+git add . && git commit -m "Descreva o que foi alterado" && git push
