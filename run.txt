@@ -1,0 +1,9 @@
+Run with:
+
+cd 1cp_streamlit_solution
+chmod +x start.sh
+./start.sh
+
+Then open:
+
+http://127.0.0.1:8501

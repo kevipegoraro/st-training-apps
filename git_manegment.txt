@@ -1,0 +1,38 @@
+# instalar git e GitHub CLI
+sudo apt update
+sudo apt install git gh -y
+
+# configurar git
+git config --global user.name "SEU_NOME"
+git config --global user.email "SEU_EMAIL_DO_GITHUB"
+
+# logar no GitHub
+gh auth login
+
+# entrar na pasta do projeto
+cd /caminho/do/seu/projeto
+
+# iniciar git
+git init
+
+# criar .gitignore básico
+cat > .gitignore << 'EOF'
+.venv/
+__pycache__/
+*.pyc
+.env
+*.sqlite3
+EOF
+
+# adicionar arquivos
+git add .
+
+# primeiro commit
+git commit -m "Initial commit"
+
+# criar repositório público no GitHub e conectar remoto
+gh repo create NOME_DO_REPOSITORIO --public --source=. --remote=origin
+
+# enviar para o GitHub
+git branch -M main
+git push -u origin main
